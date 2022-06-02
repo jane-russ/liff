@@ -63,6 +63,13 @@
     }
 
     async function getFriendship() {
+      const friend = await liff.getFriendship()
+      document.getElementById.("friendship").append(friend.friendFlag)
+      if(!friend.friendFlag){
+        if(confirm("Add BOT as your friend?")) {
+          window.location = "@482jpnrc"
+        }
+      }  
     }
 
     async function sendMsg() {
